@@ -24,7 +24,7 @@ To get a local copy up and running follow these simple example steps:
 The server is now running. Access it at http://localhost:3000/   
 
 *spa-curriculos can be substituted for any other tag
-**the first port its your choice too, the second one needs to be 3000 ( "-p < port >:3000"). Then the server will run at http://localhost:< port >/
+**the first port can also be chosen, the second one needs to be 3000 ( "-p < port >:3000"). Then the server will run at http://localhost:< port >/
 
 
 ### Stoping and removing the container
