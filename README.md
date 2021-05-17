@@ -6,29 +6,44 @@ Using the TeXLive.net server to provide free résumés tailored to each user.
 
 To get a local copy up and running follow these simple example steps:
 
-### Prerequisites
-
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
+### Execution 
 
 1. Clone the repo
    ```sh
    git clone https://github.com/carloshenriquefbf/latex-cv-spa.git
    ```
-3. Install NPM packages
+   
+2. Install docker (go to next stage if you already have installed)
+
+
+3. Execute the comands in the terminal 
    ```sh
-   npm install
-   ```
-4. Start the server
-   ```sh
-   node server.js
+   (sudo) docker build -f Dockerfile -t spa-curriculos
+   (sudo) docker run -p 3000:3000 -d spa-curriculos
    ```
 The server is now running. Access it at http://localhost:3000/   
-  
+
+*spa-curriculos can be substituted for any other tag
+**the first port its your choice too, the second one needs to be 3000 ( "-p < port >:3000"). Then the server will run at http://localhost:< port >/
+
+
+### Stoping and removing the container
+
+* To see if the container is running type in the terminal:
+    ```sh
+   (sudo) docker ps
+   ```
+
+* Use the container id shown to stop it:
+   ```sh
+   (sudo) docker stop < container id > 
+   ```
+
+* To remove it:
+   ```sh
+   (sudo) docker rm < container id > 
+   ```
+
 ## License
 
 Distributed under the MIT License.
